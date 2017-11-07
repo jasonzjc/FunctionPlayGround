@@ -22,6 +22,7 @@ csv_out = open('mycsv.csv','wb')
 
 # create a csv writer object
 mywriter = csv.writer(csv_out)
+# to change the delimiter to, e.g., tab, use mywriter = csv.writer(csv_out, delimiter ='\t')
 
 # write row by row
 for row in zip(index, name, value):
