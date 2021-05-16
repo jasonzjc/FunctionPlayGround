@@ -1,8 +1,8 @@
 # -------------------------------------------------- #
 #  Jeff Zhao
-#  11/05/3017
+#  11/05/2017
 #
-#  show how to real and write CSV file, by using csv
+#  show how to read and write CSV file, by using csv
 #  library
 # -------------------------------------------------- #
 
@@ -22,6 +22,7 @@ csv_out = open('mycsv.csv','wb')
 
 # create a csv writer object
 mywriter = csv.writer(csv_out)
+# to change the delimiter to, e.g., tab, use mywriter = csv.writer(csv_out, delimiter ='\t')
 
 # write row by row
 for row in zip(index, name, value):
@@ -89,7 +90,7 @@ value_rd = map(float, value_rd)
 # convert tuple into list
 print 'Type of index_id is', type(index_rd)
 print 'Convert to list...'
-index_rd = list(index_rd)	
+index_rd = list(index_rd)
 name_rd= list(name_rd)
 
 print index_rd
