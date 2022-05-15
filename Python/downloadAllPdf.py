@@ -9,7 +9,9 @@
 
 from bs4 import BeautifulSoup
 from selenium import webdriver 
-from selenium.webdriver.chrome.options import Options
+# from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.chrome.service import Service
+from webdriver_manager.chrome import ChromeDriverManager
 import requests
 import os
 
@@ -44,9 +46,11 @@ def scrape_main_page(main_url,driver):
     return file_links
 
 # create a webdriver object and set options for headless browsing
-options = Options()
-options.headless = True
-driver = webdriver.Chrome('./chromedriver',options=options)
+# options = Options()
+# options.headless = True
+# driver = webdriver.Chrome('./chromedriver',options=options)
+driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
+driver.get("https://www.google.com")
 
 # get all the file links
 file_links = scrape_main_page(main_url,driver)
