@@ -1,6 +1,6 @@
 # -------------------------------------------------- #
 #  Jeff Zhao
-#  11/05/3017
+#  11/05/2017
 #
 #  An example to show how to use the MySQL interface of python
 #  Need to install MySQLdb module
